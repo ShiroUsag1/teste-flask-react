@@ -36,55 +36,60 @@ Este projeto é um sistema completo de gerenciamento de tarefas com autenticaç�
 ```bash
 cd backend
 python -m venv venv
-source venv/bin/activate  # Windows: venv\\Scripts\\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-🗃️ Banco de dados
+```
+
+### 🗃️ Banco de dados
+
 No MySQL, crie o banco:
 
-sql
-Copiar
-Editar
+```sql
 CREATE DATABASE gerenciador_tarefas;
+```
+
 Depois rode as migrações:
 
-bash
-Copiar
-Editar
+```bash
 flask db init
 flask db migrate -m "init"
 flask db upgrade
+```
+
 E inicie o servidor:
 
-bash
-Copiar
-Editar
+```bash
 flask run
-🎨 Frontend (React + Vite)
-bash
-Copiar
-Editar
+```
+
+---
+
+## 🎨 Frontend (React + Vite)
+
+```bash
 cd frontend
 npm install
 npm run dev
-Acesse em: http://localhost:5173
+```
 
-🔐 Funcionalidades
-Autenticação com JWT
+Acesse em: [http://localhost:5173](http://localhost:5173)
 
-Cadastro e login de usuários
+---
 
-Criação, listagem, filtro e exclusão de tarefas
+## 🔐 Funcionalidades
 
-Filtro por título e status (pendente/concluído)
+- Autenticação com JWT
+- Cadastro e login de usuários
+- Criação, listagem, filtro e exclusão de tarefas
+- Filtro por título e status (pendente/concluído)
+- Proteção de rotas
+- Logout
 
-Proteção de rotas
+---
 
-Logout
+## 📁 Estrutura do Projeto
 
-📁 Estrutura do Projeto
-css
-Copiar
-Editar
+```
 fullstack-flask-react/
 ├── backend/
 │   ├── app.py
@@ -104,5 +109,10 @@ fullstack-flask-react/
 │       │   └── Tasks.jsx
 │       └── services/
 │           └── api.js
-👨‍💻 Autor
+```
+
+---
+
+## 👨‍💻 Autor
+
 Projeto criado por Ádria Almeida como simulação de teste prático para vaga Full Stack.
